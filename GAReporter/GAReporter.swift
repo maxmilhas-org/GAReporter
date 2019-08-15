@@ -13,13 +13,9 @@ open class GAReporter {
             return
         }
         gai.defaultTracker = gai.tracker(withTrackingId: trackID)
-        // Optional: automatically report uncaught exceptions.
-        gai.trackUncaughtExceptions = true
-        gai.dispatchInterval = 20
         if verbose {
             gai.logger.logLevel = .verbose
         }
-        gai.defaultTracker.allowIDFACollection = true
     }
     
     open class func sendScreenView(_ screen: String) {
