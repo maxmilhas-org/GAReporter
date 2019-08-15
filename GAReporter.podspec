@@ -30,6 +30,7 @@ s.libraries = ['z', 'sqlite3']
 
 # 8
 s.source_files = "GAReporter/*"
+s.exclude_files = "GAReporter/Info.plist"
 
 # 10
 s.swift_version = "4.1"
