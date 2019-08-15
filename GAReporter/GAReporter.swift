@@ -30,10 +30,28 @@ open class GAReporter {
         }
     }
     
+    open class func sendScreenView(_ screen: String, customDimension: [String: String]) {
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker?.set(kGAIScreenName, value: screen)
+        if let screenDict = GAIDictionaryBuilder.createScreenView()?.setAll(customDimension)?.build() as? [AnyHashable: Any]  {
+            tracker?.send(screenDict)
+        }
+    }
+    
     open class func sendEvent(category: String, action: String, label: String, value: NSNumber?) {
         let tracker = GAI.sharedInstance().defaultTracker
         if let eventDict = GAIDictionaryBuilder.createEvent(withCategory: category, action: action, label: label, value: value).build() as? [AnyHashable: Any] {
             tracker?.send(eventDict)
         }
+    }
+    
+    open class func get(_ parameterName: String) -> String? {
+        let tracker = GAI.sharedInstance().defaultTracker
+        return tracker?.get(parameterName)
+    }
+    
+    open class func set(_ parameterName: String, value: String) {
+        let tracker = GAI.sharedInstance().defaultTracker
+        tracker?.set(parameterName, value: value)
     }
 }
