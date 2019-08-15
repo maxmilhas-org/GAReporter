@@ -2,25 +2,25 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.ios.deployment_target = '10.0'
+s.ios.deployment_target = '11.0'
 s.name = "GAReporter"
 s.summary = "Google Analytics Wrapper"
 s.requires_arc = true
 
 # 2
-s.version = "0.0.1"
+s.version = "0.0.2"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
 
 # 4 - Replace with your name and e-mail address
-s.author = { "David Wu" => "ji3g4kami@gmail.com" }
+s.author = { "MaxMilhas" => "contato@maxmilhas.com.br" }
 
 # 5 - Replace this URL with your own GitHub page's URL (from the address bar)
-s.homepage = "https://github.com/ji3g4kami/GAReporter"
+s.homepage = "https://github.com/maxmilhas-org/GAReporter"
 
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/ji3g4kami/GAReporter.git", 
+s.source = { :git => "https://github.com/maxmilhas-org/GAReporter.git",
              :tag => "#{s.version}" }
 
 # 7 - Frameworks, libraries and dependencies
