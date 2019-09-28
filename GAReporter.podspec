@@ -8,7 +8,7 @@ s.summary = "Google Analytics Wrapper"
 s.requires_arc = true
 
 # 2
-s.version = "0.0.3"
+s.version = "0.0.4"
 
 # 3
 s.license = { :type => "MIT", :file => "LICENSE" }
@@ -33,7 +33,7 @@ s.source_files = "GAReporter/*"
 s.exclude_files = "GAReporter/Info.plist"
 
 # 10
-s.swift_version = "4.1"
+s.swift_version = "5.0"
 
 s.preserve_path = 'GAReporter/module.modulemap'
 
